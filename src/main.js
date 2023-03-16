@@ -4,4 +4,11 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
-createApp(App).use(store).use(router).mount('#app')
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
+import axios from 'axios'
+
+const app = createApp(App)
+app.use(ElementPlus)
+
+app.use(store).use(router).mount('#app')
